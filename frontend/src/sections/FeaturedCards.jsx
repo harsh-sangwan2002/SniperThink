@@ -34,7 +34,7 @@ const featureData = [
 const FeaturedCards = () => (
   <section id="features" className="section-padding bg-black text-white">
     <div className="container mx-auto px-4">
-      <h2 className="text-4xl font-bold mb-16 text-center text-blue-400">SniperThink Features</h2>
+      <h2 className="text-4xl font-bold mb-16 text-center text-teal-400">SniperThink Features</h2>
       <div className="flex flex-wrap justify-center gap-10">
         {featureData.map((item, idx) => (
           <FeatureCard

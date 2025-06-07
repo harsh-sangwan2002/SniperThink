@@ -53,7 +53,7 @@ const AppShowcase = () => {
             </div>
             <div className="text-content">
               <h2>
-                Powerful Solutions for <span className="text-blue-400">Modern Businesses</span>
+                Powerful Solutions for <span className="text-teal-400">Modern Businesses</span>
               </h2>
               <p className="text-white-50 md:text-xl">
                 Discover how our comprehensive suite of tools can help transform your business data into actionable intelligence.
@@ -68,14 +68,14 @@ const AppShowcase = () => {
                   src="/images/analytics.jpeg"
                 />
               </div>
-              <h2>Data Analytics</h2>
+              <h2 className="text-teal-400">Data Analytics</h2>
             </div>
 
             <div className="project" ref={ycDirectoryRef}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 <img src="/images/automation.jpeg" alt="YC Directory App" />
               </div>
-              <h2>Process Automation</h2>
+              <h2 className="text-teal-400">Process Automation</h2>
             </div>
           </div>
         </div>

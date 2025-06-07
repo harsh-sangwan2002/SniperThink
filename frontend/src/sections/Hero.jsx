@@ -46,7 +46,7 @@ const Hero = () => {
                   </span>
                 </span>
               </h1>
-              <h1>into <span className="text-blue-400">Business Intelligence</span> </h1>
+              <h1>into <span className="text-teal-400">Business Intelligence</span> </h1>
               <h1>that Deliver Results</h1>
             </div>
 

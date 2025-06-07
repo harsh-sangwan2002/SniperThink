@@ -20,7 +20,7 @@ const FeatureCard = ({ Icon, title, description, index }) => {
                 {/* Sparkling border effect */}
                 <div className="absolute inset-0 pointer-events-none before:absolute before:inset-0 before:rounded-2xl before:border-[2px] before:border-white/30 before:animate-borderSparkle before:opacity-50 before:blur-sm" />
 
-                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 mb-4">
+                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-tr from-green-500 to-green-700 mb-4">
                     <Icon className="text-white text-2xl" />
                 </div>
 

@@ -9,14 +9,14 @@ const Footer = () => {
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
-            <div key={index} className="icon">
+            <div key={index} className="icon hover:bg-green-600">
               <img src={socialImg.imgPath} alt="social icon" />
             </div>
           ))}
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center md:text-end">
-            © {new Date().getFullYear()} <span className="text-blue-400">SniperThink.</span> All rights reserved.
+            © {new Date().getFullYear()} <span className="text-teal-400">SniperThink.</span> All rights reserved.
           </p>
         </div>
       </div>

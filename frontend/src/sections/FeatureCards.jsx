@@ -4,7 +4,7 @@ const FeatureCards = () => (
 
       {/* Left Content */}
       <div className="flex-1">
-        <div className="h-12 w-12 bg-[#F2E2FF] rounded-full flex items-center justify-center mb-4">
+        <div className="h-12 w-12 bg-green-400 rounded-full flex items-center justify-center mb-4">
           <img src="/images/time.png" alt="icon" className="h-6 w-6" />
         </div>
         <h1 className="text-white text-4xl md:text-5xl font-bold mb-2">
@@ -16,8 +16,8 @@ const FeatureCards = () => (
       </div>
 
       {/* Right Box */}
-      <div className="bg-blue-600 rounded-lg p-6 shadow-lg cursor-pointer hover:scale-105 hover:bg-blue-400 transition-transform duration-300">
-        <p className="text-white font-semibold text-lg">Schedule Demo</p>
+      <div className="bg-teal-600 rounded-lg p-6 shadow-lg cursor-pointer hover:scale-105 hover:bg-teal-400 transition-transform duration-300">
+        <a href="#appointment" className="text-white font-semibold text-lg">Schedule Demo</a>
       </div>
 
     </div>
