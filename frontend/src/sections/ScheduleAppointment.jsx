@@ -206,7 +206,7 @@ const ScheduleAppointment = () => {
                     </div>
 
                     <div className="xl:col-span-7 min-h-96">
-                        <div className="bg-[#1f1f1f] text-teal-300 w-full h-full rounded-3xl overflow-hidden p-8">
+                        <div className="bg-[#1f1f1f] text-green-600 w-full h-full rounded-3xl overflow-hidden p-8">
                             <h3 className="text-xl font-semibold mb-4 text-center">📆 Your Appointment Preview</h3>
                             {form.dateTime ? (
                                 <div className="text-center text-lg">

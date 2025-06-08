@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
 import { socialImgs } from "../constants";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="flex flex-col justify-center">
-          <p>Terms & Conditions</p>
+        <div className="flex items-start justify-start gap-3">
+          <p className="text-teal-400">Privacy Policy</p>
+          <p className="text-teal-400">Terms & Conditions</p>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
-            <div key={index} className="icon hover:bg-green-600">
+            <a key={index} href={socialImg.url} target="_blank" className="icon hover:bg-green-600">
               <img src={socialImg.imgPath} alt="social icon" />
-            </div>
+            </a>
           ))}
         </div>
         <div className="flex flex-col justify-center">

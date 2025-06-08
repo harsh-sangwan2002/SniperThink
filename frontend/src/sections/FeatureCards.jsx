@@ -16,9 +16,9 @@ const FeatureCards = () => (
       </div>
 
       {/* Right Box */}
-      <div className="bg-teal-600 rounded-lg p-6 shadow-lg cursor-pointer hover:scale-105 hover:bg-teal-400 transition-transform duration-300">
-        <a href="#appointment" className="text-white font-semibold text-lg">Schedule Demo</a>
-      </div>
+      <a href="#appointment" className="bg-teal-600 rounded-lg p-6 shadow-lg cursor-pointer hover:scale-105 hover:bg-teal-400 transition-transform duration-300">
+        <a className="text-white font-semibold text-lg">Schedule Demo</a>
+      </a>
 
     </div>
   </div>

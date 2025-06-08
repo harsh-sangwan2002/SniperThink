@@ -208,6 +208,7 @@ const testimonials = [
     review:
       "I can’t say enough good things about SniperThink. They were able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
     imgPath: "/images/client1.png",
+    stars: 3,
   },
   {
     name: "Wade Warren",
@@ -215,6 +216,7 @@ const testimonials = [
     review:
       "Working with SniperThink was a fantastic experience. They transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
     imgPath: "/images/client3.png",
+    stars: 4,
   },
   {
     name: "Guy Hawkins",
@@ -222,6 +224,7 @@ const testimonials = [
     review:
       "Collaborating with SniperThink was an absolute pleasure. Their professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     imgPath: "/images/client2.png",
+    stars: 5,
   },
   {
     name: "Marvin McKinney",
@@ -229,6 +232,7 @@ const testimonials = [
     review:
       "Working with SniperThink was a pleasure to work with. They turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
     imgPath: "/images/client5.png",
+    stars: 3,
   },
   {
     name: "Floyd Miles",
@@ -236,6 +240,7 @@ const testimonials = [
     review:
       "SniperThink's expertise in web development is truly impressive. They delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
     imgPath: "/images/client4.png",
+    stars: 5,
   },
   {
     name: "Albert Flores",
@@ -243,24 +248,25 @@ const testimonials = [
     review:
       "It was a pleasure to work with SniperThink. They understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
     imgPath: "/images/client6.png",
+    stars: 4,
   },
 ];
 
 const socialImgs = [
   {
-    name: "insta",
+    url: "https://www.instagram.com/",
     imgPath: "/images/insta.png",
   },
   {
-    name: "fb",
+    url: "https://www.facebook.com/",
     imgPath: "/images/fb.png",
   },
   {
-    name: "x",
+    url: "https://www.twitter.com/",
     imgPath: "/images/x.png",
   },
   {
-    name: "linkedin",
+    url: "https://www.linkedin.com/in",
     imgPath: "/images/linkedin.png",
   },
 ];

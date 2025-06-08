@@ -1,87 +1,74 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Slider from "react-slick";
 import { useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger);
+const HeroCarousel = () => {
+  const sliderRef = useRef(null);
 
-const AppShowcase = () => {
-  const sectionRef = useRef(null);
-  const rydeRef = useRef(null);
-  const libraryRef = useRef(null);
-  const ycDirectoryRef = useRef(null);
+  const slides = [
+    {
+      quote: "Empowering innovation through intelligent data.",
+      headline: "Unlock Smart Solutions",
+      buttonText: "Get Started",
+      image: "/images/business.jpg",
+    },
+    {
+      quote: "Automate and elevate your workflows.",
+      headline: "Build for the Future",
+      buttonText: "View Demo",
+      image: "/images/automation.jpeg",
+    },
+    {
+      quote: "Harness analytics to lead with confidence.",
+      headline: "Data-Driven Decisions",
+      buttonText: "Learn More",
+      image: "/images/analytics.jpeg",
+    },
+  ];
 
-  useGSAP(() => {
-    // Animation for the main section
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
-    );
-
-    // Animations for each app showcase
-    const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current];
-
-    cards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        {
-          y: 50,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: 0.3 * (index + 1),
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=100",
-          },
-        }
-      );
-    });
-  }, []);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000, // Play every 5 seconds
+    pauseOnHover: false,
+  };
 
   return (
-    <div id="work" ref={sectionRef} className="app-showcase">
-      <div className="w-full">
-        <div className="showcaselayout">
-          <div ref={rydeRef} className="first-project-wrapper">
-            <div className="image-wrapper">
-              <img src="/images/business.jpg" alt="Ryde App Interface" />
-            </div>
-            <div className="text-content">
-              <h2>
-                Powerful Solutions for <span className="text-teal-400">Modern Businesses</span>
-              </h2>
-              <p className="text-white-50 md:text-xl">
-                Discover how our comprehensive suite of tools can help transform your business data into actionable intelligence.
+    <div className="w-full bg-black text-white">
+      <Slider ref={sliderRef} {...settings}>
+        {slides.map((slide, index) => (
+          <div key={index} className="relative h-[90vh] w-[90vw] py-30 px-30">
+            <img
+              src={slide.image}
+              alt={slide.headline}
+              className="w-full h-full object-cover opacity-40"
+            />
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+              <p className="text-lg md:text-xl italic mb-4 text-teal-300">
+                {slide.quote}
               </p>
+              <h1 className="text-3xl md:text-5xl font-bold mb-6">
+                {slide.headline}
+              </h1>
+              <a
+                href="#contact"
+                className="bg-teal-600 hover:bg-teal-500 text-white px-6 py-3 rounded-full transition font-semibold"
+              >
+                {slide.buttonText}
+              </a>
             </div>
           </div>
-
-          <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
-              <div className="image-wrapper bg-[#FFEFDB]">
-                <img
-                  src="/images/analytics.jpeg"
-                />
-              </div>
-              <h2 className="text-teal-400">Data Analytics</h2>
-            </div>
-
-            <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/automation.jpeg" alt="YC Directory App" />
-              </div>
-              <h2 className="text-teal-400">Process Automation</h2>
-            </div>
-          </div>
-        </div>
-      </div>
+        ))}
+      </Slider>
     </div>
   );
 };
 
-export default AppShowcase;
+export default HeroCarousel;
