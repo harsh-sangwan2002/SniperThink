@@ -1,0 +1,78 @@
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+const services = [
+    {
+        title: "Website & Web App Development",
+        desc: "We craft lightning-fast websites and progressive web apps tailored to maximize lead generation.",
+        icon: "🌐",
+    },
+    {
+        title: "Custom CRM Solutions",
+        desc: "End-to-end CRM platforms with pipeline tracking, client lifecycle automation, and real-time analytics.",
+        icon: "💼",
+    },
+    {
+        title: "AI-Powered Business Automation",
+        desc: "Automate internal workflows, client onboarding, and report generation with intelligent AI agents.",
+        icon: "🤖",
+    },
+    {
+        title: "Document Intelligence Systems",
+        desc: "Turn unstructured data into structured, actionable insights using NLP + OCR + LLM technology.",
+        icon: "📄",
+    },
+    {
+        title: "Email Marketing Automation",
+        desc: "Behavior-triggered email flows, follow-up sequences, and newsletters with CRM integration.",
+        icon: "✉️",
+    },
+    {
+        title: "E-Commerce Automation",
+        desc: "Manage inventory, orders, vendors, and customer experience with AI-backed dashboards and APIs.",
+        icon: "🛒",
+    },
+];
+
+export default function ServicesSection() {
+    return (
+        <motion.section
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className="bg-black text-white py-16 px-4"
+        >
+            <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold">Our Services</h2>
+                <p className="text-gray-300 mt-2">
+                    Comprehensive automation solutions to help your business scale efficiently
+                </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {services.map((service, idx) => (
+                    <div
+                        key={idx}
+                        className="bg-green-900 text-white p-6 rounded-lg shadow-lg flex flex-col justify-between transition-transform hover:scale-[1.02]"
+                    >
+                        <div>
+                            <div className="text-4xl mb-4">{service.icon}</div>
+                            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                            <p className="text-gray-100">{service.desc}</p>
+                        </div>
+                        <div className="mt-4 flex items-center text-sm font-medium">
+                            <span>Learn more</span>
+                            <motion.span
+                                className="ml-2 inline-block"
+                                animate={{ x: [0, 4, 0] }}
+                                transition={{ repeat: Infinity, duration: 1.2 }}
+                            >
+                                →
+                            </motion.span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </motion.section>
+    );
+}

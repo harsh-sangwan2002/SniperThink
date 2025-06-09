@@ -4,19 +4,23 @@ import DatasetIcon from '@mui/icons-material/Dataset';
 
 const navLinks = [
   {
-    name: "Solutions",
+    name: "About Us",
     link: "#work",
   },
   {
-    name: "Industries",
+    name: "Our Services",
     link: "#industries",
   },
   {
-    name: "Case Studies",
+    name: "Resources",
     link: "#skills",
   },
   {
-    name: "Testimonials",
+    name: "Contact Us",
+    link: "#testimonials",
+  },
+  {
+    name: "FAQs",
     link: "#testimonials",
   },
 ];

@@ -51,7 +51,7 @@ const HeroCarousel = () => {
               className="w-full h-full object-cover opacity-40"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-              <p className="text-lg md:text-xl italic mb-4 text-teal-300">
+              <p className="text-lg md:text-xl italic mb-4 text-teal-600">
                 {slide.quote}
               </p>
               <h1 className="text-3xl md:text-5xl font-bold mb-6">
@@ -59,7 +59,7 @@ const HeroCarousel = () => {
               </h1>
               <a
                 href="#contact"
-                className="bg-teal-600 hover:bg-teal-500 text-white px-6 py-3 rounded-full transition font-semibold"
+                className="bg-teal-600 hover:bg-pink-800 text-white px-6 py-3 rounded-full transition font-semibold"
               >
                 {slide.buttonText}
               </a>

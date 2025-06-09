@@ -5,6 +5,7 @@ const Navbar = lazy(() => import("./components/NavBar"));
 const Hero = lazy(() => import("./sections/Hero"));
 const ShowcaseSection = lazy(() => import("./sections/ShowcaseSection"));
 const LogoShowcase = lazy(() => import("./sections/LogoShowcase"));
+const ServicesSection = lazy(() => import('./sections/ServicesSection'));
 const FeatureCards = lazy(() => import("./sections/FeatureCards"));
 const FeaturedCards = lazy(() => import("./sections/FeaturedCards"));
 const Indsutries = lazy(() => import("./sections/Industries"));
@@ -29,6 +30,7 @@ const App = () => (
           <Hero />
           <ShowcaseSection />
           <LogoShowcase />
+          <ServicesSection />
           <FeatureCards />
           <FeaturedCards />
           <Indsutries />
