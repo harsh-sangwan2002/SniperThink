@@ -32,7 +32,7 @@ const FAQsSection = () => {
     };
 
     return (
-        <section className="max-w-4xl mx-auto py-16 px-4">
+        <section id="faq" className="max-w-4xl mx-auto py-16 px-4">
             <h2 className="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
 
             <div className="space-y-4">
@@ -43,10 +43,10 @@ const FAQsSection = () => {
                     >
                         <button
                             onClick={() => toggleIndex(index)}
-                            className="w-full text-left p-4 bg-black hover:bg-teal-700 flex justify-between items-center"
+                            className="w-full text-left p-4 bg-black flex justify-between items-center"
                         >
                             <span className="font-medium">{faq.question}</span>
-                            <span className="text-xl color-black">
+                            <span className="text-xl color-black cursor-pointer">
                                 {openIndex === index ? "−" : "+"}
                             </span>
                         </button>

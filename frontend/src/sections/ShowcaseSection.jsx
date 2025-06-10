@@ -41,7 +41,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="w-full bg-black text-white">
+    <div id="about" className="w-full bg-black text-white">
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, index) => (
           <div key={index} className="relative h-[90vh] w-[90vw] py-30 px-30">
@@ -59,7 +59,7 @@ const HeroCarousel = () => {
               </h1>
               <a
                 href="#contact"
-                className="bg-teal-600 hover:bg-pink-800 text-white px-6 py-3 rounded-full transition font-semibold"
+                className="bg-teal-600 hover:bg-purple-800 text-white px-6 py-3 rounded-full transition font-semibold"
               >
                 {slide.buttonText}
               </a>

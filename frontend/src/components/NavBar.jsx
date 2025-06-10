@@ -23,7 +23,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
+    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"} mt-3`}>
       <div className="inner">
         <a href="#hero" className="logo">
           SniperThink

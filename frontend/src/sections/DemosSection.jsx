@@ -29,7 +29,7 @@ const demos = [
 const DemoSection = () => {
     return (
         <div className="w-full flex justify-center items-start px-4 py-16 mt-10">
-            <section className="bg-[#111] rounded-xl p-10 max-w-7xl w-full">
+            <section className="bg-teal-800 rounded-xl p-10 max-w-7xl w-full">
                 <h2 className="text-4xl font-bold text-white text-center mb-10">
                     Explore Our Demos
                 </h2>
@@ -51,7 +51,8 @@ const DemoSection = () => {
                                 </h3>
                                 <a
                                     href={demo.link}
-                                    className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded-full transition"
+                                    target="_blank"
+                                    className="bg-purple-800 hover:bg-purple-900 text-white text-sm font-semibold px-4 py-2 rounded-full transition"
                                 >
                                     View Demo
                                 </a>

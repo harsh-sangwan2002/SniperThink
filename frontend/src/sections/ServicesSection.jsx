@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const services = [
@@ -34,33 +33,54 @@ const services = [
     },
 ];
 
+// Variants for animation
+const containerVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.2,
+            delayChildren: 0.3,
+        },
+    },
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 export default function ServicesSection() {
     return (
         <motion.section
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
             className="bg-black text-white py-16 px-4"
+            id="services"
         >
             <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold">Our Services</h2>
+                <h2 className="text-4xl font-bold text-green-600">Our Services</h2>
                 <p className="text-gray-300 mt-2">
                     Comprehensive automation solutions to help your business scale efficiently
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <motion.div
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+                variants={containerVariants}
+            >
                 {services.map((service, idx) => (
-                    <div
+                    <motion.div
                         key={idx}
-                        className="bg-green-900 text-white p-6 rounded-lg shadow-lg flex flex-col justify-between transition-transform hover:scale-[1.02]"
+                        variants={cardVariants}
+                        className="bg-purple-800 text-white p-6 rounded-lg shadow-lg flex flex-col justify-between transition-transform hover:scale-[1.02]"
                     >
                         <div>
                             <div className="text-4xl mb-4">{service.icon}</div>
                             <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                             <p className="text-gray-100">{service.desc}</p>
                         </div>
-                        <div className="mt-4 flex items-center text-sm font-medium">
+                        <div className="mt-4 flex items-center text-sm font-medium cursor-pointer">
                             <span>Learn more</span>
                             <motion.span
                                 className="ml-2 inline-block"
@@ -70,9 +90,9 @@ export default function ServicesSection() {
                                 →
                             </motion.span>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </motion.section>
     );
 }

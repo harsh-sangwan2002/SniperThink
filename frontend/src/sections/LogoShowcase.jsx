@@ -38,7 +38,7 @@ const LogoShowcase = () => {
   return (
     <section ref={ref} className="relative py-16 md:py-24 flex flex-col items-center">
       {/* Center Logo Above */}
-      <div className="absolute -top-10 bg-pink-800 px-6 py-3 rounded-full shadow-lg z-10">
+      <div className="absolute -top-10 bg-teal-800 px-6 py-3 rounded-full shadow-lg z-10">
         <img
           src="/images/logo.jpeg"
           alt="SniperThink"
@@ -60,10 +60,10 @@ const LogoShowcase = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={animate ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: index * 0.1 }}
-            className="group cursor-pointer relative p-6 bg-pink-800 text-white rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl"
+            className="group cursor-pointer relative p-6 bg-teal-800 text-white rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl"
           >
             {/* Top-right hover border */}
-            <div className="absolute top-0 right-0 w-6 h-6 bg-pink-500 rounded-bl-lg scale-0 group-hover:scale-50 transition-transform duration-300" />
+            <div className="absolute top-0 right-0 w-6 h-6 bg-teal-500 rounded-bl-lg scale-0 group-hover:scale-50 transition-transform duration-300" />
 
             {/* Animated Icon */}
             <motion.div

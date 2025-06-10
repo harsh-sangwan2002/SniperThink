@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
@@ -10,14 +11,18 @@ import StorageIcon from "@mui/icons-material/Storage";
 import LayersIcon from "@mui/icons-material/Layers";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Hero = () => {
   useGSAP(() => {
+    // Hero heading animation
     gsap.fromTo(
       ".hero-text h1",
       { y: 50, opacity: 0 },
       { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
     );
 
+    // Floating card bounce animation
     gsap.to("#floating-card", {
       y: -80,
       repeat: -1,
@@ -26,6 +31,7 @@ const Hero = () => {
       ease: "power1.inOut",
     });
 
+    // Scroll dot bounce
     gsap.to(".scroll-dot", {
       y: 24,
       repeat: -1,
@@ -34,6 +40,7 @@ const Hero = () => {
       ease: "power1.inOut",
     });
 
+    // Icon bounce
     gsap.to(".bounce-icon", {
       y: -10,
       repeat: -1,
@@ -41,6 +48,19 @@ const Hero = () => {
       duration: 1.5,
       ease: "sine.inOut",
       stagger: 0.2,
+    });
+
+    // Fade-in on scroll
+    gsap.from("#floating-card", {
+      scrollTrigger: {
+        trigger: "#floating-card",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power2.out",
     });
   }, []);
 
@@ -97,7 +117,7 @@ const Hero = () => {
         <figure className="md:w-1/2 w-full flex justify-center items-center relative mt-10 md:mt-0">
           <div
             id="floating-card"
-            className="relative rounded-2xl bg-pink-800 shadow-xl p-15 max-w-sm text-center"
+            className="relative rounded-2xl bg-purple-800 shadow-xl p-15 max-w-sm text-center will-change-transform will-change-opacity"
           >
             {/* Inner Border */}
             <div className="absolute inset-2 border-2 border-white/20 rounded-2xl pointer-events-none z-0" />
@@ -122,10 +142,10 @@ const Hero = () => {
 
           {/* Scroll Mouse Animation */}
           <div className="absolute bottom-[-70px] flex flex-col items-center">
-            <div className="scroll-mouse w-6 h-12 border-2 border-pink-600 rounded-full flex justify-start items-start relative overflow-hidden">
-              <div className="scroll-dot w-1 h-2 bg-pink-600 rounded-full mt-1 ml-2 absolute" />
+            <div className="scroll-mouse w-6 h-12 border-2 border-purple-600 rounded-full flex justify-start items-start relative overflow-hidden">
+              <div className="scroll-dot w-1 h-2 bg-purple-600 rounded-full mt-1 ml-2 absolute" />
             </div>
-            <p className="text-sm text-pink-600 mt-1">Scroll</p>
+            <p className="text-sm text-purple-600 mt-1">Scroll</p>
           </div>
         </figure>
       </div>

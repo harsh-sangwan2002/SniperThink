@@ -23,7 +23,7 @@ const blogs = [
 
 const BlogsSection = () => {
     return (
-        <div className="w-full flex justify-center items-start px-4 py-16 mt-10">
+        <div id="blogs" className="w-full flex justify-center items-start px-4 py-16 mt-10">
             <section className="bg-[#111] rounded-xl p-10 max-w-7xl w-full">
                 <h2 className="text-4xl font-bold text-white text-center mb-10">
                     Resources & Blogs
@@ -36,7 +36,7 @@ const BlogsSection = () => {
                             href={blog.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="min-w-[280px] max-w-sm bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
+                            className="min-w-[280px] max-w-sm bg-purple-800 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300"
                         >
                             <img
                                 src={blog.image}
@@ -44,7 +44,7 @@ const BlogsSection = () => {
                                 className="w-full h-48 object-cover rounded-t-xl"
                             />
                             <div className="p-4">
-                                <h3 className="text-lg font-semibold text-gray-800">{blog.title}</h3>
+                                <h3 className="text-lg font-semibold text-white text-center">{blog.title}</h3>
                             </div>
                         </a>
                     ))}

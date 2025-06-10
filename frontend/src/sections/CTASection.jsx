@@ -8,7 +8,7 @@ const CTASection = () => {
                     className="w-full max-w-sm object-cover rounded-lg flex-shrink-0"
                 />
                 <div className="flex-1">
-                    <h2 className="text-3xl font-bold mb-4 text-center md:text-left text-orange-400">
+                    <h2 className="text-3xl font-bold mb-4 text-center md:text-left text-purple-400">
                         "Your journey to a better future starts here."
                     </h2>
                     <p className="text-2xl text-center md:text-left text-gray-300">
