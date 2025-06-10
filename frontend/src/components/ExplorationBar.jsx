@@ -9,7 +9,7 @@ const ExplorationBar = () => {
             </div>
 
             {/* Center: Promo */}
-            <div className="text-teal-400 font-medium text-xl">
+            <div className="text-teal-500 font-medium text-xl">
                 🌱 Try our new AI-Powered Business Tool – Free for 14 Days!
             </div>
 

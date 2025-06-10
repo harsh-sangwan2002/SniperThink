@@ -28,48 +28,98 @@ const features = [
 ];
 
 const LogoShowcase = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const [animate, setAnimate] = useState(false);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2
+  });
+
+  const [visibleCards, setVisibleCards] = useState([]);
 
   useEffect(() => {
-    if (inView) setAnimate(true);
+    if (inView) {
+      // Animate cards one by one with staggered timing
+      features.forEach((_, index) => {
+        setTimeout(() => {
+          setVisibleCards(prev => [...prev, index]);
+        }, index * 150); // 150ms delay between each card
+      });
+    }
   }, [inView]);
 
   return (
-    <section ref={ref} className="relative py-16 md:py-24 flex flex-col items-center">
+    <section ref={ref} className="relative mt-5 py-16 md:py-24 flex flex-col items-center">
       {/* Center Logo Above */}
-      <div className="absolute -top-10 bg-teal-800 px-6 py-3 rounded-full shadow-lg z-10">
+      <motion.div
+        className="px-6 py-3 shadow-lg z-10"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={inView ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.8 }}
+      >
         <img
           src="/images/logo.jpeg"
           alt="SniperThink"
-          className="w-28 h-auto object-contain"
+          className="w-80 h-80 object-contain rounded-[65px]"
         />
-      </div>
+      </motion.div>
 
       {/* Title */}
-      <h2 className="text-3xl font-bold mb-3 text-center">Scalable Verticals</h2>
-      <p className="text-gray-500 text-center mb-10 max-w-xl">
+      <motion.h2
+        className="text-5xl text-teal-500 font-bold mt-3 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        Comprehensive Solutions
+      </motion.h2>
+
+      <motion.p
+        className="text-gray-400 text-center mt-5 mb-10 max-w-xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
         We provide scalable solutions across various domains to help your business grow
-      </p>
+      </motion.p>
 
       {/* Card Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 z-0">
         {features.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={animate ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: index * 0.1 }}
-            className="group cursor-pointer relative p-6 bg-teal-800 text-white rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl"
+            initial={{
+              opacity: 0,
+              y: 50,
+              scale: 0.8
+            }}
+            animate={
+              visibleCards.includes(index)
+                ? {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1
+                }
+                : {}
+            }
+            transition={{
+              duration: 0.6,
+              ease: "easeOut"
+            }}
+            className="group cursor-pointer relative card card-border p-10 bg-gray-800 text-white rounded-xl shadow-md transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl"
           >
-            {/* Top-right hover border */}
-            <div className="absolute top-0 right-0 w-6 h-6 bg-teal-500 rounded-bl-lg scale-0 group-hover:scale-50 transition-transform duration-300" />
-
             {/* Animated Icon */}
             <motion.div
               className="mb-4"
-              animate={{ x: [-2, 2, -2], y: [-2, 2, -2] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              animate={
+                visibleCards.includes(index)
+                  ? { x: [-2, 2, -2], y: [-2, 2, -2] }
+                  : {}
+              }
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5 // Start floating animation after card appears
+              }}
             >
               {item.icon}
             </motion.div>

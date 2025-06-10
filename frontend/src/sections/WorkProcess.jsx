@@ -34,7 +34,7 @@ const WorkProcess = () => {
   return (
     <section className="py-20 px-6 text-white text-center">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl text-green-600 font-bold mb-4">Work Process</h2>
+        <h2 className="text-5xl text-teal-500 font-bold mb-4">Work Process</h2>
         <p className="text-white text-xl mb-12">
           Turning Ideas Into Scalable Success
         </p>
@@ -54,7 +54,7 @@ const WorkProcess = () => {
                 scale: 1.03,
                 transition: { type: "spring", stiffness: 200, damping: 10 },
               }}
-              className="flex flex-col items-center text-center max-w-xs bg-teal-800 border border-gray-800 rounded-2xl hover:bg-green-900 px-10 py-10"
+              className="flex flex-col items-center text-center max-w-xs bg-gray-800 border border-gray-800 rounded-2xl hover:bg-transparent px-10 py-10"
               style={{ perspective: 1000 }}
             >
               <motion.div
@@ -62,7 +62,7 @@ const WorkProcess = () => {
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
-                className="bg-green-800 text-white text-xl font-bold h-16 w-16 rounded-full flex items-center justify-center mb-4 shadow-lg cursor-pointer"
+                className="bg-white text-black text-xl font-bold h-16 w-16 rounded-full flex items-center justify-center mb-4 shadow-lg cursor-pointer"
               >
                 {i + 1}
               </motion.div>

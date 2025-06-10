@@ -41,7 +41,7 @@ const MeetOurTeam = () => {
                     {teamMembers.map(({ name, role, bio, img }) => (
                         <div
                             key={name}
-                            className="bg-teal-600 cursor-pointer hover:bg-teal-800 rounded-lg shadow p-6 flex flex-col items-center"
+                            className="bg-teal-800 cursor-pointer hover:bg-teal-900 rounded-lg shadow p-6 flex flex-col items-center"
                         >
                             <img
                                 src={img}

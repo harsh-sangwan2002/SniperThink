@@ -59,8 +59,8 @@ export default function ServicesSection() {
             id="services"
         >
             <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-green-600">Our Services</h2>
-                <p className="text-gray-300 mt-2">
+                <h2 className="text-5xl font-bold text-white">Our Services</h2>
+                <p className="text-gray-300 text-lg mt-2">
                     Comprehensive automation solutions to help your business scale efficiently
                 </p>
             </div>
@@ -73,7 +73,7 @@ export default function ServicesSection() {
                     <motion.div
                         key={idx}
                         variants={cardVariants}
-                        className="bg-purple-800 text-white p-6 rounded-lg shadow-lg flex flex-col justify-between transition-transform hover:scale-[1.02]"
+                        className="bg-gradient-to-br from-gray-500 to-gray-800 text-white p-6 rounded-lg shadow-lg flex flex-col justify-between transition-transform hover:scale-[1.02]"
                     >
                         <div>
                             <div className="text-4xl mb-4">{service.icon}</div>

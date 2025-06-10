@@ -47,7 +47,7 @@ const FAQPage = () => {
         <div className="min-h-screen px-4 py-16 max-w-5xl mx-auto">
             {/* Page Heading */}
             <h1 className="text-4xl font-bold text-center mb-6">Frequently Asked Questions</h1>
-            <p className="text-center text-gray-600 mb-12 max-w-xl mx-auto">
+            <p className="text-center text-white mb-12 max-w-xl mx-auto">
                 Can’t find what you’re looking for? Browse our most common questions below or reach out to our support team.
             </p>
 

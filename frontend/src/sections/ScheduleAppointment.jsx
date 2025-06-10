@@ -114,12 +114,12 @@ const ScheduleAppointment = () => {
                                         session ? (
                                             <>
                                                 <p className="text-blue-300 mb-2">Logged in as: {session.user.email}</p>
-                                                <button onClick={googleSignOut} className="bg-purple-700 cursor-pointer text-white px-4 py-2 rounded hover:bg-purple-800 transition-colors mb-4">
+                                                <button onClick={googleSignOut} className="bg-gray-600 cursor-pointer text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors mb-4">
                                                     Sign Out.
                                                 </button>
                                             </>
                                         ) : (
-                                            <button onClick={googleSignIn} className="bg-purple-700 cursor-pointer text-white px-4 py-2 rounded hover:bg-purple-800 transition-colors mb-4">
+                                            <button onClick={googleSignIn} className="bg-gray-600 cursor-pointer text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors mb-4">
                                                 Sign In With Google.
                                             </button>
                                         )
@@ -206,7 +206,7 @@ const ScheduleAppointment = () => {
                     </div>
 
                     <div className="xl:col-span-7 min-h-96">
-                        <div className="bg-[#1f1f1f] text-purple-500 w-full h-full rounded-3xl overflow-hidden p-8">
+                        <div className="bg-[#1f1f1f] text-teal-500 w-full h-full rounded-3xl overflow-hidden p-8">
                             <h3 className="text-xl font-semibold mb-4 text-center">📆 Your Appointment Preview</h3>
                             {form.dateTime ? (
                                 <div className="text-center text-lg">
@@ -220,7 +220,7 @@ const ScheduleAppointment = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-                                    className="mt-8 p-4 bg-purple-600 rounded text-white"
+                                    className="mt-8 p-4 bg-teal-800 rounded text-white"
                                 >
                                     <p>✅ Appointment Details:</p>
                                     <ul className="mt-2 list-disc pl-5">

@@ -124,7 +124,7 @@ section {
     }
 
     .logo {
-      @apply text-teal-400 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
+      @apply text-teal-600 text-xl md:text-2xl font-semibold transition-transform duration-300 hover:scale-105;
     }
 
     nav.desktop {
@@ -151,7 +151,7 @@ section {
       @apply flex;
 
       .inner {
-        @apply px-5 py-2 rounded-lg bg-teal-600 text-white group-hover:bg-teal-400 transition-colors duration-300;
+        @apply px-5 py-2 rounded-lg bg-teal-700 text-white group-hover:bg-teal-800 transition-colors duration-300;
 
         span {
           @apply group-hover:text-white transition-colors duration-300;
@@ -213,7 +213,7 @@ section {
   }
 
   .cta-button {
-    @apply px-4 py-4 rounded-lg bg-purple-600 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    @apply px-4 py-4 rounded-lg bg-teal-800 flex justify-center items-center relative cursor-pointer overflow-hidden;
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 w-[120%] h-[120%] group-hover:size-10 group-hover:right-10 rounded-full bg-white-50 transition-all duration-500;
