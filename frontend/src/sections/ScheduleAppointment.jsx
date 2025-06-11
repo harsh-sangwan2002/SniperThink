@@ -110,7 +110,7 @@ const ScheduleAppointment = () => {
                                 className="w-full flex flex-col gap-7"
                             >
                                 <div>
-                                    {
+                                    {/* {
                                         session ? (
                                             <>
                                                 <p className="text-blue-300 mb-2">Logged in as: {session.user.email}</p>
@@ -123,7 +123,7 @@ const ScheduleAppointment = () => {
                                                 Sign In With Google.
                                             </button>
                                         )
-                                    }
+                                    } */}
                                     <label htmlFor="name">Your name</label>
                                     <input
                                         type="text"

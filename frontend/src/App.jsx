@@ -19,6 +19,7 @@ const FAQsSection = lazy(() => import("./sections/FAQsSection"));
 const FAQPage = lazy(() => import("./sections/FAQPage"));
 const CTASection = lazy(() => import("./sections/CTASection"));
 const Footer = lazy(() => import("./sections/Footer"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
 const App = () => (
   <Router>
@@ -43,6 +44,7 @@ const App = () => (
       } />
       <Route path="/demo/:id" element={<DemoViewer />} />
       <Route path="/faqs" element={<FAQPage />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     <CTASection />
     <Footer />
