@@ -137,6 +137,8 @@ const scheduleMeeting = async (req, res) => {
         const end = new Date(start);
         end.setMinutes(end.getMinutes() + 30);
 
+        console.log(calendar);
+
         const event = {
             summary: `Appointment with ${name}`,
             description: `${description}\nContact: ${contact}`,

@@ -35,7 +35,7 @@ const ScheduleAppointment = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await fetch("http://localhost:3000/api/calendar/schedule", {
+        const res = await fetch("http://localhost:8080/api/calendar/schedule", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
