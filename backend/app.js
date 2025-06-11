@@ -10,7 +10,7 @@ app.use(
         secret: "hsangwan2002",
         resave: false,
         saveUninitialized: false,
-        cookie: { secure: false }, // true if using HTTPS
+        cookie: { secure: false },
     })
 );
 
@@ -19,7 +19,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
     origin: "http://localhost:5174",
-    origin: "http://localhost:5173",
     credentials: true
 }));
 
