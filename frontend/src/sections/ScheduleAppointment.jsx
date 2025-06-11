@@ -20,7 +20,7 @@ const ScheduleAppointment = () => {
     const { isloading } = useSessionContext();
 
     if (isloading) {
-        return <></>
+        return <div>Loading...</div>
     }
 
     const handleChange = (e) => {
