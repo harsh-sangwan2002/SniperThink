@@ -23,7 +23,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"} py-10`}>
+    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"} py-8`}>
       <div className="inner">
         <a href="#hero" className="logo">
           SniperThink

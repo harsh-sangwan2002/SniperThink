@@ -66,7 +66,7 @@ const WorkProcess = () => {
               >
                 {i + 1}
               </motion.div>
-              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+              <h3 className="text-2xl font-semibold mb-2">{step.title}</h3>
               <p className="text-white text-sm">{step.desc}</p>
             </motion.div>
           ))}
