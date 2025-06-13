@@ -48,7 +48,7 @@ const DemoViewer = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen px-4 py-16">
+        <div className="flex flex-col items-center justify-center min-h-screen py-16 px-20">
             <div className="max-w-xl w-full bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
                 <img
                     src={demo.image}

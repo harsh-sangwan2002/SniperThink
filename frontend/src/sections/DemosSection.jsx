@@ -30,7 +30,7 @@ const demos = [
 
 const DemoSection = () => {
     return (
-        <div className="w-full flex justify-center items-start px-4 py-16 mt-10">
+        <div className="w-full flex justify-center items-start py-16 px-20 mt-10">
             <section className="bg-teal-900 rounded-xl p-10 max-w-7xl w-full">
                 <h2 className="text-4xl font-bold text-white text-center mb-10">
                     Explore Our Demos

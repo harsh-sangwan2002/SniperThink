@@ -106,15 +106,17 @@ const Hero = () => {
 
         {/* RIGHT: Carousel */}
         <figure className="md:w-1/2 w-full flex justify-center items-center relative mt-10 md:mt-0">
-          {/* Custom Arrows */}
+          {/* LEFT ARROW BUTTON */}
           <button
-            className="absolute left-[125px] top-1/2 -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-sm shadow"
+            className="absolute left-4 md:left-[125px] top-1/2 -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-sm shadow"
             onClick={() => sliderRef.current.slickPrev()}
           >
             ←
           </button>
+
+          {/* RIGHT ARROW BUTTON */}
           <button
-            className="absolute right-[130px] top-1/2 -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-sm  shadow"
+            className="absolute right-4 md:right-[130px] top-1/2 -translate-y-1/2 z-10 bg-gray-800 text-white p-2 rounded-sm shadow"
             onClick={() => sliderRef.current.slickNext()}
           >
             →
@@ -155,7 +157,7 @@ const Hero = () => {
           </div>
 
           {/* Scroll Mouse */}
-          <div className="absolute bottom-[-150px] flex flex-col items-center">
+          <div className="absolute bottom-[-85px] flex flex-col items-center">
             <div className="scroll-mouse w-6 h-12 border-2 border-gray-400 rounded-full flex justify-start items-start relative overflow-hidden">
               <div className="scroll-dot w-1 h-2 bg-gray-400 rounded-full mt-1 ml-2 absolute" />
             </div>

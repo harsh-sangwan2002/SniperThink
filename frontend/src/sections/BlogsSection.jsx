@@ -23,13 +23,13 @@ const blogs = [
 
 const BlogsSection = () => {
     return (
-        <div id="blogs" className="w-full flex justify-center items-start px-4 py-16 mt-10">
+        <div id="blogs" className="w-full flex justify-center items-start py-16 px-20 mt-10">
             <section className="bg-gradient-to-br from-gray-500 to-gray-800 rounded-xl p-10 max-w-7xl w-full">
                 <h2 className="text-4xl font-bold text-white text-center mb-10">
                     Resources & Blogs
                 </h2>
 
-                <div className="flex gap-6 overflow-x-auto pb-4 scroll-smooth scrollbar-hide">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {blogs.map((blog, index) => (
                         <a
                             key={index}

@@ -28,7 +28,7 @@ const App = () => (
     <ScrollToTop />
     <Routes>
       <Route path="/" element={
-        <>
+        <main className="mt-[7rem] md:mt-[6rem]">
           <Hero />
           <LogoShowcase />
           <ServicesSection />
@@ -40,7 +40,7 @@ const App = () => (
           <Testimonials />
           <MeetOurTeam />
           <FAQsSection />
-        </>
+        </main>
       } />
       <Route path="/demo/:id" element={<DemoViewer />} />
       <Route path="/faqs" element={<FAQPage />} />

@@ -33,7 +33,7 @@ const teamMembers = [
 
 const MeetOurTeam = () => {
     return (
-        <div className="w-full flex justify-center items-start px-1 py-16 mt-10">
+        <div className="w-full flex justify-center items-start px-15 py-20 mt-10">
             <section className="bg-[#111] rounded-xl p-10 max-w-7xl w-full gap-6">
                 <h2 className="text-4xl font-bold text-center mb-12 text-white">Meet Our Team</h2>
 

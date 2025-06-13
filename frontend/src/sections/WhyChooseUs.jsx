@@ -21,8 +21,8 @@ const cardHoverEffect = {
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-black text-white py-20 px-6">
-      <h2 className="text-5xl text-center text-white font-bold mb-10">Work Process</h2>
+    <section className="bg-black text-white py-16 px-20">
+      <h2 className="text-5xl text-center text-white font-bold mb-10">Why Choose Us</h2>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
         {/* Left Content */}

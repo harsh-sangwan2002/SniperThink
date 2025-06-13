@@ -55,12 +55,14 @@ export default function ServicesSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="bg-black text-white py-16 px-4"
+            className="bg-black text-white py-16 px-20"
             id="services"
         >
             <div className="text-center mb-12">
-                <h2 className="text-5xl font-bold text-white">Our Services</h2>
-                <p className="text-gray-300 text-lg mt-2">
+                <h2 className="text-5xl font-bold text-white">
+                    Our Services
+                </h2>
+                <p className="text-sm sm:text-base md:text-lg text-gray-300 mt-2">
                     Comprehensive automation solutions to help your business scale efficiently
                 </p>
             </div>
