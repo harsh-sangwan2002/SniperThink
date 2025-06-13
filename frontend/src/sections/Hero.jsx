@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/all";
 import AnimatedCounter from "../components/AnimatedCounter";
 import { words } from "../constants";
 
-import AutoModeIcon from "@mui/icons-material/AutoMode";
 import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
